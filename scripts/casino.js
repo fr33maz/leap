@@ -11,10 +11,10 @@ while (moneyPresent > 0) {
 
 }
 function play(amount) {
-    if (Math.round(Math.random())) {
+    if (Math.round(Math.random())) { //true
         moneyPresent += amount;
         console.log(`you win and now you have ${moneyPresent}$`)
-    } else {
+    } else { //false
         moneyPresent -= amount;
         console.log(`you loose and now you have ${moneyPresent}$`)
         bet *= 2;

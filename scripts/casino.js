@@ -12,10 +12,7 @@ while (moneyPresent > 0) {
 }
 function play(amount) {
 
-    if (Math.round(Math.random()) == prompt("Press 1: To bet on red\nPress 2: To bet on black") - 1) { //true
-        moneyPresent += amount;
-        alert(`you win and now you have ${moneyPresent}$`)
-    } else { //false
+    if (Math.round(Math.random()) == prompt("Press 1: To bet on red\nPress 2: To bet on black") - 1) { //true / red
         moneyPresent -= amount;
         bet *= 2;
         if (moneyPresent) {
@@ -23,5 +20,9 @@ function play(amount) {
         } else {
             alert(`you loose and now you have ${moneyPresent}$`)
         }
+
+    } else { //false / black
+        moneyPresent += amount;
+        alert(`you win and now you have ${moneyPresent}$`)
     }
 }

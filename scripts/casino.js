@@ -11,12 +11,17 @@ while (moneyPresent > 0) {
 
 }
 function play(amount) {
-    if (Math.round(Math.random())) { //true
+
+    if (Math.round(Math.random()) == prompt("Press 1: To bet on red\nPress 2: To bet on black") - 1) { //true
         moneyPresent += amount;
-        console.log(`you win and now you have ${moneyPresent}$`)
+        alert(`you win and now you have ${moneyPresent}$`)
     } else { //false
         moneyPresent -= amount;
-        console.log(`you loose and now you have ${moneyPresent}$`)
         bet *= 2;
+        if (moneyPresent) {
+            alert(`you loose and now you have ${moneyPresent}$, your next bet is equal to ${bet}`)
+        } else {
+            alert(`you loose and now you have ${moneyPresent}$`)
+        }
     }
 }
